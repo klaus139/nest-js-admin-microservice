@@ -26,4 +26,8 @@ export class ProductService {
     await this.productRepository.update(id, data);
     return this.productRepository.findOne({ where: { id } });
   }
+
+  async delete(id: number): Promise<any> {
+    return this.productRepository.delete(id);
+  }
 }
